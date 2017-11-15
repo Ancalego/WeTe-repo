@@ -37,10 +37,23 @@ function addTask() {
     return false;
     
 } // End of addTask() function.
+function removeduplicates() {
+	'use strict';
+	var alt = tasks
+	.map((task)=>{
+		return {count: 1, task: task}
+	})
+	.reduce((a, b)=> {
+		a[b.task] = (a[b.name] || 0) + b.count
+		return a},{})
+	var duplicates = Object.keys(alt).filter((a)=> uniq[a]>1
+	
+	}
 
+	
 // Initial setup:
 function init() {
-    'use strict';
-    document.getElementById('theForm').onsubmit = addTask;
+	'use strict';
+	document.getElementById('theForm').onsubmit = addTask;
 } // End of init() function.
 window.onload = init;
