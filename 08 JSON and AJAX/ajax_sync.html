@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +19,15 @@
       // var story = getJsonSync('https://gist.githubusercontent.com/c0lin/571d38b984d41b44aacf/raw/story.json');
       var story = getJsonSync('data/story.json');
       addHtmlToPage(story.heading);
-
       story.chapterUrls.forEach(function(chapterUrl) {
         var chapter = getJsonSync('data/'+chapterUrl); // remove the 'data/' part if using gist
         addHtmlToPage(chapter.html);
       });
-
       addTextToPage("All done");
     }
     catch (err) {
       addTextToPage("Argh, broken: " + err.message);
     }
-
     document.querySelector('.spinner').style.display = 'none';
   </script>
 </body>
