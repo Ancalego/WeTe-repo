@@ -21,20 +21,20 @@ function process() {
 	    department: department,
 	    hireDate: new Date()
 	}; // Don't forget the semicolon!
-	
+
 	console.log(employee);
 
     // Create the ouptut as HTML:
     var message = '<h2>Employee Added</h2>Name: ' + employee.lastName + ', ' + employee.firstName + '<br>';
     message += 'Department: ' + employee.department + '<br>';
     message += 'Hire Date: ' + employee.hireDate.toDateString();
-    
+
     // Display the employee object:
     output.innerHTML = message;
-        
+
     // Return false:
     return false;
-    
+
 } // End of process() function.
 
 // Initial setup:
