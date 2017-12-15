@@ -16,7 +16,6 @@ function test(){
 <p>hehe</p>
 </html>
 </body>
-
 <?php
 $string = "I'll \"walk\" the <b>dog</b> now";  // notice \-sign before double quotes!
 $a = htmlentities($string);
